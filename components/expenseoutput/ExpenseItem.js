@@ -4,10 +4,10 @@ import { GlobalStyle } from "../../constant/color";
 import { getFormattedDate } from "../../util/date";
 import { useNavigation } from "@react-navigation/native";
 
-export default function ExpenseItem({ description, amount, date }) {
+export default function ExpenseItem({ description, amount, date, id }) {
   const nav = useNavigation();
   const expensePressHandle = () => {
-    nav.navigate("ManageExpress", { expensesID: 1 });
+    nav.navigate("ManageExpress", { expensesID: id });
   };
   return (
     <Pressable
